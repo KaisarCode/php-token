@@ -1,2 +1,2 @@
-# Tokens
-[php] Generate token functions.
+# Token
+[php] Methods to generate keys and tokens.
