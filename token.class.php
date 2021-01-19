@@ -24,11 +24,4 @@ Class Token {
         }
         return $token;
     }
-    
-    // Generate expiration duration
-    static function generateExpiration($s = 1) {
-        if (is_nan($s)) $s = 0;
-        $ts = time();
-        return round($ts / $s);
-    }
 }
