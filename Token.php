@@ -1,6 +1,4 @@
 <?php
-namespace KC;
-
 Class Token {
     
     // Generate key
