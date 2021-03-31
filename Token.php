@@ -1,6 +1,19 @@
 <?php
 Class Token {
     
+    // Pseudo-random string
+    static function rndStr($len = 8, $chr = '') {
+        if (!$chr) {
+            $chr .= '0123456789';
+            $chr .= 'abcdefghijklmnopqrstuvwxyz';
+            $chr .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        } $chl = strlen($chr);
+        $str = '';
+        for ($i = 0; $i < $len; $i++) {
+            $str .= $chr[rand(0, $chl - 1)];
+        } return $str;
+    }
+    
     // Generate key
     static function generateKey($length = 8) {
         $pool = array_merge(range(0,9),
